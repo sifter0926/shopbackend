@@ -9,4 +9,6 @@ import java.util.List;
 public interface PurchaseService {
     Purchase savePurchase(PurchasesDTO purchaseDTO);
     List<PurchaseItem> findPurchaseItemsOfUser(String username);
+    List<Purchase> findAllPurchases();
+    void deletePurchase(Long id);
 }
