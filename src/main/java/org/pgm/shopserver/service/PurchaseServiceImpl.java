@@ -45,6 +45,11 @@ public class PurchaseServiceImpl implements PurchaseService{
     @Override
     public List<PurchaseItem> findPurchaseItemsOfUser(String username) {
         User user=userRepository.findByUsername(username);
+        List<PurchaseItem> purchaseItems=purchaseRepositroy.findAllPurchasesOfUser(username);
+        purchaseItems.forEach(purchaseItem->{
+            log.info(purchaseItem.getQuantity());
+            log.info(purchaseItem.getPurchaseTime());
+        });
         return purchaseRepositroy.findAllPurchasesOfUser(username);
     }
 

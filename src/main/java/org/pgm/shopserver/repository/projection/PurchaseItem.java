@@ -5,5 +5,5 @@ import java.time.LocalDateTime;
 public interface PurchaseItem {
     String getName();
     Integer getQuantity();
-    LocalDateTime getPurchaseDate();
+    LocalDateTime getPurchaseTime();
 }
